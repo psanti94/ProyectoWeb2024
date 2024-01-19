@@ -1,0 +1,31 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+{% block imagen %}
+
+<img src="{% static 'AppSantiago/assets/img/portfolio/partidos.jpg' %}" alt="boca" width="400">
+
+<br>
+
+{% endblock %}
+
+{% block titulo %}
+
+<br>
+PARTIDOS
+
+{% endblock %}
+
+{% block descripcion %}
+
+PARTIDOS DISPUTADOS POR SANTAMARINA
+
+<br>
+<br>
+<a href="{% url 'PartidosLeer' %}">
+    <button>Base de Datos Partidos</button>
+</a>
+
+{% endblock %}

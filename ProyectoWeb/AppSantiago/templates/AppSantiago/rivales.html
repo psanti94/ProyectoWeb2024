@@ -1,0 +1,32 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+{% block imagen %}
+
+<img src="{% static 'AppSantiago/assets/img/portfolio/rivales.jpg' %}" alt="rival" width="400">
+
+<br>
+
+{% endblock %}
+
+{% block titulo %}
+
+<br>
+
+RIVALES
+
+{% endblock %}
+
+{% block descripcion %}
+
+EQUIPOS QUE ENFRENTARON A SANTAMARINA
+
+<br>
+<br>
+<a href="{% url 'RivalesLeer' %}">
+    <button>Base de Datos Rivales</button>
+</a>
+
+{% endblock %}

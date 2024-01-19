@@ -1,0 +1,51 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+{% block imagen %}
+
+<img src="{% static 'AppSantiago/assets/img/portfolio/tecnico.jpg' %}" alt="botella" width="300">
+
+<br>
+
+{% endblock %}
+
+{% block titulo %}
+
+<br>
+TECNICOS
+
+{% endblock %}
+
+{% block descripcion %}
+
+TECNICOS QUE DIRIGIERON A SANTAMARINA
+<br>
+<br>
+{% for entrenador in DTs %}
+
+    <p>Nombre: {{entrenador.nombre}}</p>
+    <p>Año de nacimiento: {{entrenador.año_nacimiento}}</p>
+    <p>Partidos: {{entrenador.partidos}}</p>
+
+    <button>
+        <a href="{% url 'EntrenadoresEditar' entrenador.nombre %}"> Editar Entrenador</a>
+    </button>
+    
+    <button>
+        <a href="{% url 'EntrenadoresEliminar' entrenador.nombre %}"> Eliminar Entrenador</a>
+    </button>
+
+    ########################
+
+    {% endfor %}
+    
+    <br>
+    <br>
+    
+    <button>
+        <a href="{% url 'EntrenadoresCrear'%}"> Nuevo Entrenador</a>
+        </button>
+    
+{% endblock %}

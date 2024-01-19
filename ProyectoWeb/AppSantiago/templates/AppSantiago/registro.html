@@ -1,0 +1,28 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Registrarse
+
+{% endblock %}
+
+{% block descripcion %}
+
+CLUB Y BIBLIOTECA RAMON SANTAMARINA
+
+
+<form action="" method="POST">{% csrf_token %}
+
+    <br>
+
+    {{formulario.as_p}}
+
+    <button type="submit">Registrarse</button>
+
+</form>
+
+{% endblock %}

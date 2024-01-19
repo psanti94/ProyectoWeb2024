@@ -1,0 +1,29 @@
+{% extends "AppSantiago/padre.html" %}
+
+{% block titulo %}
+
+    <h1>Aca buscamos los rivales de Santamarina </h1>
+
+    <form action="/AppSantiago/resultados/" method="GET">
+        Ingrese la localidad a buscar: <input type="text" name="localidad">
+        <input type="submit" value ="Buscar">
+    </form>
+
+    {% if rivales %}
+
+    {% for x in rivales %}
+
+    <p>{{x.nombre}}</p>
+
+    {% endfor %}
+
+    {% endif %}
+
+
+{% endblock %}
+
+{% block descripcion %}
+
+CLUB Y BIBLIOTECA RAMON SANTAMARINA
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "AppSantiago/padre.html" %}
+
+{% block titulo %}
+
+<h1>Editar Jugador</h1>
+
+<form action = "" method="POST"> {% csrf_token %}
+
+    {{mi_formu_jugador.as_p }}
+       
+    <input type="submit">
+</form>
+
+{% endblock %}
+
+{% block descripcion %}
+
+Editar jugadores en la base de datos del Club.
+
+{% endblock %}

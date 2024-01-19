@@ -1,0 +1,57 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+{% block imagen %}
+
+<img src="{% static 'AppSantiago/assets/img/portfolio/rivales.jpg' %}" alt="rival" width="400">
+
+<br>
+
+{% endblock %}
+
+{% block titulo %}
+
+<br>
+
+RIVALES
+
+{% endblock %}
+
+{% block descripcion %}
+
+EQUIPOS QUE ENFRENTARON A SANTAMARINA
+<br>
+<br>
+
+    {% for rival in RIV %}
+
+    <p>Nombre: {{rival.nombre}}</p>
+    <p>Localidad: {{rival.localidad}}</p>
+    <p>Provincia: {{rival.provincia}}</p>
+    <p>Partidos Disputados: {{rival.partidos_disputados}}</p>
+    <p>Partidos Ganados: {{rival.partidos_ganados}}</p>
+    <p>Partidos Empatados: {{rival.partidos_empatados}}</p>
+    <p>Partidos Perdidos: {{rival.partidos_perdidos}}</p>
+
+    <button>
+        <a href="{% url 'RivalesEditar' rival.nombre %}"> Editar Rival</a>
+    </button>
+    
+    <button>
+        <a href="{% url 'RivalesEliminar' rival.nombre %}"> Eliminar Rival</a>
+    </button>
+
+    ########################
+
+    {% endfor %}
+
+    <br>
+    <br>
+
+    <button>
+    <a href="{% url 'RivalesCrear'%}"> Nuevo Rival</a>
+    </button>
+
+{% endblock %}

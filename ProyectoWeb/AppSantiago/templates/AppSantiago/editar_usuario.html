@@ -1,0 +1,30 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Editar Información
+
+{% endblock %}
+
+{% block descripcion %}
+
+CLUB Y BIBLIOTECA RAMON SANTAMARINA
+
+
+<form action="" method="POST">{% csrf_token %}
+
+    <br>
+
+    {{formulario}}
+
+    <input type="submit" value="Actualizar">
+    
+</form>
+
+
+
+{% endblock %}

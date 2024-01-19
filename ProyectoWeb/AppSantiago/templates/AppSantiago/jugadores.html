@@ -1,0 +1,32 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+{% block imagen %}
+
+<img src="{% static 'AppSantiago/assets/img/portfolio/jugador.jpg' %}" alt="michel" width="300">
+
+<br>
+{% endblock %}
+
+{% block titulo %}
+
+<br>
+JUGADORES
+
+{% endblock %}
+
+{% block descripcion %}
+
+JUGADORES DEL CLUB SANTAMARINA
+
+<br>
+<br>
+<a href="{% url 'JugadoresLeer' %}">
+    <button>Base de Datos Jugadores</button>
+</a>
+
+
+{% endblock %}
+

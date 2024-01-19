@@ -1,0 +1,64 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+{% block imagen %}
+
+<img src="{% static 'AppSantiago/assets/img/portfolio/partidos.jpg' %}" alt="boca" width="400">
+
+<br>
+
+{% endblock %}
+
+{% block titulo %}
+
+<br>
+PARTIDOS
+
+{% endblock %}
+
+{% block descripcion %}
+
+PARTIDOS DISPUTADOS POR SANTAMARINA
+
+<br>
+<br>
+
+
+{% for partido in PART %}
+
+<p>Categoria: {{partido.categoria}}</p>
+<p>Torneo: {{partido.torneo}}</p>
+<p>Fecha1: {{partido.fecha1}}</p>
+<p>Fecha: {{partido.fecha}}</p>
+<p>Rival: {{partido.rival}}</p>
+<p>Rdo1: {{partido.rdo1}}</p>
+<p>Rdo2: {{partido.rdo2}}</p>
+<p>Resultado: {{partido.resultado}}</p>
+<p>Goles: {{partido.goles}}</p>
+<p>Condicion: {{partido.condicion}}</p>
+<p>Estadio: {{partido.estadio}}</p>
+<p>Localidad: {{partido.localidad}}</p>
+
+<button>
+    <a href="{% url 'PartidosEditar' partido.fecha1 %}"> Editar Partido</a>
+</button>
+
+<button>
+    <a href="{% url 'PartidosEliminar' partido.fecha1 %}"> Eliminar Partido</a>
+</button>
+
+########################
+
+{% endfor %}
+
+<br>
+<br>
+
+<button>
+<a href="{% url 'PartidosCrear'%}"> Nuevo Partido</a>
+</button>
+
+
+{% endblock %}

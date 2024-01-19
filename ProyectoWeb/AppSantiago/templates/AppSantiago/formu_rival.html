@@ -1,0 +1,20 @@
+{% extends "AppSantiago/padre.html" %}
+
+{% block titulo %}
+
+<h1>Nuevo Rival</h1>
+
+<form action = "" method="POST"> {% csrf_token %}
+
+    {{mi_formu_rival.as_p }}
+      
+    <input type="submit">    
+</form>
+
+{% endblock %}
+
+{% block descripcion %}
+
+Agregar rivales a la base de datos del Club.
+
+{% endblock %}

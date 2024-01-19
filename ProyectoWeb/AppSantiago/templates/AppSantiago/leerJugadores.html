@@ -1,0 +1,52 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+{% block imagen %}
+
+<img src="{% static 'AppSantiago/assets/img/portfolio/jugador.jpg' %}" alt="michel" width="300">
+
+<br>
+{% endblock %}
+
+{% block titulo %}
+
+<br>
+JUGADORES
+
+{% endblock %}
+
+{% block descripcion %}
+
+JUGADORES DEL CLUB SANTAMARINA
+
+
+{% for jugador in JUG %}
+
+<p>Nombre: {{jugador.nombre}}</p>
+<p>Año de nacimiento: {{jugador.año_nacimiento}}</p>
+<p>Partidos Jugados: {{jugador.partidos_jugados}}</p>
+<p>Goles: {{jugador.goles}}</p>
+
+<button>
+    <a href="{% url 'JugadoresEditar' jugador.nombre %}"> Editar Jugador</a>
+</button>
+
+<button>
+    <a href="{% url 'JugadoresEliminar' jugador.nombre %}"> Eliminar Jugador</a>
+</button>
+
+########################
+
+{% endfor %}
+
+<br>
+<br>
+
+<button>
+<a href="{% url 'JugadoresCrear'%}"> Nuevo Jugador</a>
+</button>
+
+{% endblock %}
+

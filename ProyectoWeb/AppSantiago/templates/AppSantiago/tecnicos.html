@@ -1,0 +1,30 @@
+{% extends "AppSantiago/padre.html" %}
+
+
+{% load static %}
+
+{% block imagen %}
+
+<img src="{% static 'AppSantiago/assets/img/portfolio/tecnico.jpg' %}" alt="botella" width="300">
+
+<br>
+
+{% endblock %}
+
+{% block titulo %}
+
+<br>
+TECNICOS
+
+{% endblock %}
+
+{% block descripcion %}
+
+TECNICOS QUE DIRIGIERON A SANTAMARINA
+<br>
+<br>
+<a href="{% url 'EntrenadoresLeer' %}">
+    <button>Base de Datos Entrenadores</button>
+</a>
+
+{% endblock %}
