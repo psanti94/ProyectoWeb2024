@@ -27,7 +27,7 @@ Rivales
 
 Ingresando a http://127.0.0.1:8000/AppSantiago se pueden encontrar las distintas funcionalidades.
 Las pruebas realizadas se pueden ver en el archivo anexo Casos de Prueba.xlsx
-Video demostración en el siguiente link:
+Video demostración en el siguiente link: https://drive.google.com/file/d/1Vv_d5S9K5dcKaYRM2N0bjjCtU71faJDs/view?usp=sharing
 
 
 
